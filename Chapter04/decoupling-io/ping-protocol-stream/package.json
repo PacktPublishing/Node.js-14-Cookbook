@@ -1,0 +1,17 @@
+{
+  "name": "foo-protocol-stream",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pumpify": "^1.3.5",
+    "split2": "^2.1.1",
+    "through2": "^2.0.3"
+  }
+}
