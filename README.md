@@ -32,6 +32,3 @@ The following is a list of the software that is required to run the examples in 
 * [Cross-platform Desktop Application Development: Electron, Node, NW.js, and React](https://www.packtpub.com/web-development/cross-platform-desktop-application-development-electron-node-nwjs-and-react?utm_source=github&utm_medium=repository&utm_campaign=9781788295697)
 
 * [Building Bots with Node.js](https://www.packtpub.com/application-development/building-bots-nodejs?utm_source=github&utm_medium=repository&utm_campaign=9781786465450)
-
-### Suggestions and Feedback
-[Click here](https://docs.google.com/forms/d/e/1FAIpQLSe5qwunkGf6PUvzPirPDtuy1Du5Rlzew23UBp2S-P3wB-GcwQ/viewform) if you have any feedback or suggestions.
