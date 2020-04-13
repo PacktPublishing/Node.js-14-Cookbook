@@ -1,0 +1,24 @@
+{
+  "name": "@bethany.griggs/reverse-sentence",
+  "version": "0.1.0",
+  "description": "Reverses a sentence.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "prepublish": "npm run lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BethGriggs/reverse-sentence.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BethGriggs/reverse-sentence/issues"
+  },
+  "homepage": "https://github.com/BethGriggs/reverse-sentence#readme",
+  "devDependencies": {
+    "standard": "^14.3.3"
+  }
+}
