@@ -1,0 +1,30 @@
+<form method="POST">
+    <label for="forename">Forename:</label>
+    <input id="forename" name="forename">
+    <label for="surname">Surname:</label>
+    <input id="surname" name="surname">
+    <input type="submit" value="Submit">
+</form>
+
+<script>
+    document.forms[0].addEventListener('submit', (event) => {
+        event.preventDefault()
+
+        let data = {
+            'forename': document.getElementById('forename').value,
+            'surname': document.getElementById('surname').value
+        };
+        console.log('data', data);
+
+        fetch('http://localhost:3000', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then(function (response) {
+            console.log(response);
+            return response.json();
+        });
+    });
+</script>
