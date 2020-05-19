@@ -9,8 +9,7 @@ fs.readFile(filepath, "utf8", function (err, contents) {
   }
   console.log("File Contents:", contents);
   const upperContents = contents.toUpperCase();
-  fs.writeFile(filepath, upperContents, function (err) {
-    if (err) throw err;
-    console.log("File updated.");
-  });
+
+  fs.writeFileSync(filepath, upperContents);
+  console.log("File updated.");
 });

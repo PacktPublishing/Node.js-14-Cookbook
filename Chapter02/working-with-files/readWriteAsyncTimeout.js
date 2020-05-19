@@ -10,8 +10,14 @@ fs.readFile(filepath, "utf8", function (err, contents) {
   console.log("File Contents:", contents);
   const upperContents = contents.toUpperCase();
 
-  fs.writeFile(filepath, upperContents, function (err) {
+  setTimeout(() => updateFile(filepath, upperContents), 10);
+});
+
+function updateFile(filepath, contents) {
+  fs.writeFile(filepath, contents, function (err) {
     if (err) throw err;
     console.log("File updated.");
   });
-});
+}
+
+setInterval(() => process.stdout.write("**** \n"), 1).unref();
