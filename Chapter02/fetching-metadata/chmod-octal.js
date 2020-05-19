@@ -1,4 +1,4 @@
-const fs = require('fs')
-const file = './file.txt'
+const fs = require("fs");
+const file = "./file.txt";
 
-fs.chmodSync(file, 0o664)
+fs.chmodSync(file, 0o664);
