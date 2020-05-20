@@ -4,7 +4,7 @@
   "description": "Reverses a sentence.",
   "main": "index.js",
   "scripts": {
-    "lint": "standard",
+    "lint": "./node_modules/prettier/bin-prettier.js . --write",
     "prepublish": "npm run lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/BethGriggs/reverse-sentence#readme",
   "devDependencies": {
-    "standard": "^14.3.3"
+    "prettier": "2.0.5"
   }
 }
