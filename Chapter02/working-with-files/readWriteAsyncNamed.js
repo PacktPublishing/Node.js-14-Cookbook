@@ -3,7 +3,7 @@ const path = require("path");
 
 const filepath = path.join(process.cwd(), "hello.txt");
 
-fs.readFile(filepath, "utf8", function (err, contents) {
+fs.readFile(filepath, "utf8", (err, contents) => {
   if (err) {
     return console.log(err);
   }

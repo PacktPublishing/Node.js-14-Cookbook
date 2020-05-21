@@ -1,5 +1,5 @@
-require("dotenv").config();
 const mysql = require("mysql");
+require("dotenv").config();
 
 const db = mysql.createConnection({
   user: process.env.DB_MYSQL_USER,
@@ -9,12 +9,11 @@ const db = mysql.createConnection({
 db.query("CREATE DATABASE tasks");
 db.query("USE tasks");
 
-db.query(
-  "CREATE TABLE tasks.tasks (" +
-    "id INT NOT NULL AUTO_INCREMENT, " +
-    "task TEXT NOT NULL, PRIMARY KEY ( id )" +
-    ")"
-);
+db.query(`
+CREATE TABLE tasks.tasks (
+id INT NOT NULL AUTO_INCREMENT, 
+task TEXT NOT NULL, PRIMARY KEY ( id ))
+`);
 
 const ignore = new Set(["ER_DB_CREATE_EXISTS", "ER_TABLE_EXISTS_ERROR"]);
 
@@ -25,16 +24,15 @@ db.on("error", (err) => {
 
 db.query(`
 INSERT INTO tasks.tasks (task)
-VALUES ("Walk the dog"); 
+VALUES ("Walk the dog."); 
 `);
 
 db.query(
   `
 SELECT * FROM tasks.tasks;
 `,
-  (err, results) => {
+  (err, results, fields) => {
     console.log(results);
+    db.end();
   }
 );
-
-db.end();
