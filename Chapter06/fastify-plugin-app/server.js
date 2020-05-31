@@ -2,9 +2,7 @@ const fastify = require("fastify")();
 
 const PORT = process.env.PORT || 3000;
 
-fastify.get("/", async (request, reply) => {
-  return { message: "Hello world!" };
-});
+fastify.register(require("./plugins/hello-route"));
 
 const startServer = async () => {
   try {

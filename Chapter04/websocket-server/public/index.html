@@ -1,32 +1,32 @@
 <h1>Communicating with WebSockets</h1>
 
-<input id="msg"><button id="send">Send</button>
+<input id="msg" /><button id="send">Send</button>
 <div id="output"></div>
 
 <script>
-    const ws = new WebSocket('ws://localhost:3000')
-    const output = document.getElementById('output')
-    const send = document.getElementById('send')
+  const ws = new WebSocket("ws://localhost:3000");
+  const output = document.getElementById("output");
+  const send = document.getElementById("send");
 
-    send.addEventListener('click', () => {
-        const msg = document.getElementById('msg').value
-        ws.send(msg)
-        output.innerHTML += log('Sent', msg)
-    })
+  send.addEventListener("click", () => {
+    const msg = document.getElementById("msg").value;
+    ws.send(msg);
+    output.innerHTML += log("Sent", msg);
+  });
 
-    function log(event, msg) {
-        return '<p>' + event + ': ' + msg + '</p>'
-    }
+  function log(event, msg) {
+    return "<p>" + event + ": " + msg + "</p>";
+  }
 
-    ws.onmessage = function (e) {
-        output.innerHTML += log('Received', e.data)
-    }
+  ws.onmessage = function (e) {
+    output.innerHTML += log("Received", e.data);
+  };
 
-    ws.onclose = function (e) {
-        output.innerHTML += log('Disconnected', e.code)
-    }
+  ws.onclose = function (e) {
+    output.innerHTML += log("Disconnected", e.code);
+  };
 
-    ws.onerror = function (e) {
-        output.innerHTML += log('Error', e.data)
-    }
+  ws.onerror = function (e) {
+    output.innerHTML += log("Error", e.data);
+  };
 </script>
