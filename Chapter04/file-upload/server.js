@@ -27,6 +27,11 @@ function get(res) {
   res.end(form);
 }
 
+function error(code, res) {
+  res.statusCode = code;
+  res.end(http.STATUS_CODES[code]);
+}
+
 function post(req, res) {
   if (!/multipart\/form-data/.test(req.headers["content-type"])) {
     error(415, res);
@@ -43,16 +48,6 @@ function post(req, res) {
     res.writeHead(200, {
       "Content-Type": "application/json",
     });
-    res.end(
-      JSON.stringify({
-        fields,
-        files,
-      })
-    );
+    res.end(JSON.stringify({fields,files,}));
   });
-}
-
-function error(code, res) {
-  res.statusCode = code;
-  res.end(http.STATUS_CODES[code]);
 }

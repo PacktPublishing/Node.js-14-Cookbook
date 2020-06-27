@@ -10,7 +10,6 @@ http
       get(res);
       return;
     }
-
     if (req.method === "POST") {
       post(req, res);
       return;
