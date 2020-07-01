@@ -7,3 +7,4 @@ module.exports.getGitHubUser = (username) => {
       return json;
     });
 };
+

@@ -32,3 +32,4 @@ module.exports = {
   created_at: "2013-01-30T18:13:42Z",
   updated_at: "2020-06-09T20:53:23Z",
 };
+
