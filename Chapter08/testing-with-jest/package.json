@@ -1,15 +1,15 @@
 {
-  "name": "enabling-travis",
+  "name": "testing-with-jest",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "test test/test.js"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "tape": "^5.0.1"
+  "devDependencies": {
+    "jest": "^26.1.0"
   }
 }

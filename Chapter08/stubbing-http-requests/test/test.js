@@ -9,7 +9,7 @@ test("Get GitHub user by username", async function (t) {
 
   sinon.stub(github, "getGitHubUser").returns(octokitUserData);
   
-  const githubUser = await github.getGitHubUser("Octokit");
+  const githubUser = await github.getGitHubUser("bethgriggs");
 
   t.equal(githubUser.id, 3430433);
   t.equal(githubUser.login, "octokit");
