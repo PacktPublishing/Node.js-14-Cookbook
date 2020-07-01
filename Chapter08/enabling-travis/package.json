@@ -1,0 +1,15 @@
+{
+  "name": "enabling-travis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test test/test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tape": "^5.0.1"
+  }
+}
