@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fastify-app
+  labels:
+    app: fastify
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: fastify
+  template:
+    metadata:
+      labels:
+        app: fastify
+    spec:
+      containers:
+      - name: fastify-app
+        image: fastify-microservice:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 3000

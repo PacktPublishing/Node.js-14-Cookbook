@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Book Inventory</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Book Inventory</h1>
+    <ul>
+        <% for(let book of books) { %>
+            <li><%= book.title %> - <%= book.author %></li>
+        <% } %>
+    </ul>
+
+    <h2>Add Book:</h2>
+    <form action="/inventory/add" method="POST">
+        <label for="title">Title</label>
+        <input type="text" name="title" />
+        <label for="author">Author</label>
+        <input type="text" name="author" />
+        <button type="submit" value="Submit">Submit</button>
+    </form>
+  </body>
+</html>
