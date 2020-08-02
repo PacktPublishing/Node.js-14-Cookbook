@@ -1,0 +1,23 @@
+{
+  "name": "enabling-travis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bethgriggs/enabling-travis.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bethgriggs/enabling-travis/issues"
+  },
+  "homepage": "https://github.com/bethgriggs/enabling-travis#readme",
+  "devDependencies": {
+    "tape": "^5.0.1"
+  }
+}
