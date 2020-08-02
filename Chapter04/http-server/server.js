@@ -23,6 +23,6 @@ function index(res) {
   res.end('{"name": "todo-server"}');
 }
 
-server.listen(PORT, HOSTNAME, () => {
+server.listen({PORT}, HOSTNAME, () => {
   console.log("Server listening on", server.address());
 });
