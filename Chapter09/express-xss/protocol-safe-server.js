@@ -2,11 +2,11 @@ const express = require("express");
 const app = express();
 const escapeHTML = require("escape-html");
 
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   const { previous, lang, token } = req.query;
   getServiceStatus((status) => {
-      const href = escapeHTML(`/${previous}${token}/${lang}`);
-      res.send(`
+    const href = escapeHTML(`/${previous}${token}/${lang}`);
+    res.send(`
       <h1>Service Status</h1>
       <div id=status>  
         ${status}
@@ -26,4 +26,3 @@ getServiceStatus = (callback) => {
 app.listen(3000, () => {
   console.log("Server listening on port 3000");
 });
-

@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express();
 
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   const { previous, lang, token } = req.query;
   getServiceStatus((status) => {
     res.send(`
       <h1>Service Status</h1>
-      <div id=status>  
+      <div id=status>
         ${status}
       </div>
       <div>
@@ -24,4 +24,3 @@ getServiceStatus = (callback) => {
 app.listen(3000, () => {
   console.log("Server listening on port 3000");
 });
-
