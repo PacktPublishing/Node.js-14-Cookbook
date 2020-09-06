@@ -13,6 +13,7 @@ app.set("view engine", "ejs");
 
 app.use(
   session({
+    name: "SESSIONID",
     secret: "Node Cookbook",
     resave: false,
     saveUninitialized: false,
