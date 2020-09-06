@@ -1,17 +1,18 @@
 const express = require("express");
 const app = express();
 
-app.get("*", (req, res) => {
+app.get("/", (req, res) => {
   const { previous, lang, token } = req.query;
 
   if (!validateParameters({ previous, token, lang }, req.query)) {
     res.sendStatus(422);
     return;
   }
+
   getServiceStatus((status) => {
     res.send(`
       <h1>Service Status</h1>
-      <div id=status>  
+      <div id=status>
         ${status}
       </div>
       <div>
@@ -41,4 +42,3 @@ validateParameters = ({ previous, token, lang }, query) => {
 app.listen(3000, () => {
   console.log("Server listening on port 3000");
 });
-
