@@ -30,7 +30,7 @@ const initialize = async () => {
   });
 
   await server.start();
-  console.log("Server running on %s", server.info.uri);
+  console.log("Server listening on", server.info.uri);
 };
 
 initialize();
