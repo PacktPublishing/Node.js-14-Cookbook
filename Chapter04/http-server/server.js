@@ -1,7 +1,7 @@
 const http = require("http");
 
 const HOSTNAME = process.env.HOSTNAME || "0.0.0.0";
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
   if (req.method !== "GET") return error(res, 405);
@@ -23,6 +23,6 @@ function index(res) {
   res.end('{"name": "todo-server"}');
 }
 
-server.listen({PORT}, HOSTNAME, () => {
-  console.log("Server listening on", server.address());
+server.listen(PORT, HOSTNAME, () => {
+  console.log(`Server listening on port ${server.address().port}`);
 });
