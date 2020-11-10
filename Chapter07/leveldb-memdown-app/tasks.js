@@ -1,7 +1,7 @@
 const levelup = require("levelup");
-const leveldown = require("leveldown");
+const memdown = require("memdown");
 
-const db = levelup(leveldown("./data"));
+const db = levelup(memdown("./data"));
 
 const task = process.argv[2];
 
