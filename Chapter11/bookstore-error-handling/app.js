@@ -40,9 +40,9 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
+module.exports = app;
+
 process.on("unhandledRejection", (reason, promise) => {
   console.log("Unhandled Rejection at:", promise, "reason:", reason);
   process.exit(1);
 });
-
-module.exports = app;
