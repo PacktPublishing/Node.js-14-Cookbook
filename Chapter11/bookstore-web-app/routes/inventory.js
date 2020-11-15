@@ -10,15 +10,8 @@ router.get("/", function (req, res) {
       res.render("inventory", {
         books: json,
       })
-    )
-    .catch((error) => {
-      res.render("error", {
-        error: error,
-        message: error.message,
-      });
-    });
+    );
 });
-
 
 router.post("/add", function (req, res) {
   console.log(req.body);
