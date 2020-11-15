@@ -16,9 +16,9 @@
   "license": "ISC",
   "dependencies": {
     "fastify": "^3.0.0",
-    "fastify-plugin": "^2.0.0",
+    "fastify-plugin": "^3.0.0",
     "fastify-autoload": "^3.0.2",
-    "fastify-cli": "^2.0.2"
+    "fastify-cli": "^2.5.1"
   },
   "devDependencies": {
     "tap": "^14.0.0"
