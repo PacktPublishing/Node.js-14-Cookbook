@@ -1,34 +1,73 @@
-# Node Cookbook - Third Edition
-This is the code repository for [Node Cookbook - Third Edition](https://www.packtpub.com/web-development/node-cookbook-third-edition?utm_source=github&utm_medium=repository&utm_campaign=9781785880087), published by [Packt](https://www.packtpub.com/?utm_source=github). It contains all the supporting project files necessary to work through the book from start to finish.
-## About the Book
-The principles of asynchronous event-driven programming are perfect for today's web, where efficient real-time applications and scalability are at the forefront. Server-side JavaScript has been here since the 90's but Node got it right.
-## Instructions and Navigation
-All of the code is organized into folders. Each folder starts with a number followed by the application name. For example, Chapter02.
+# Node Cookbook - Fourth Edition
+
+<a href="https://www.packtpub.com/product/node-cookbook-fourth-edition/9781838558758?utm_source=github&utm_medium=repository&utm_campaign=9781838558758"><img src="https://static.packt-cdn.com/products/9781838558758/cover/smaller" alt="Node Cookbook - Fourth Edition" height="256px" align="right"></a>
+
+This is the code repository for [Node Cookbook - Fourth Edition](https://www.packtpub.com/product/node-cookbook-fourth-edition/9781838558758?utm_source=github&utm_medium=repository&utm_campaign=9781838558758), published by Packt.
+
+**Discover solutions, techniques, and best practices for server-side web development with Node.js 14**
+
+## What is this book about?
+A key technology for building web applications and tooling, Node.js brings JavaScript to the server enabling full-stack development in a common language. This fourth edition of the Node Cookbook is updated with the latest Node.js features and the evolution of the Node.js framework ecosystems.
+
+This book covers the following exciting features: 
+* Understand the async and sync programming models of Node.js
+* Create simple Node.js applications using modules and web frameworks
+* Debug and diagnose issues in your Node.js applications
+* Deploy Node.js applications to production
+* Create a simple web app using Fastify, Hapi, and Express.js
+* Discover tips for scaling, securing, and testing your Node.js web applications
+
+If you feel this book is for you, get your [copy](https://www.amazon.com/dp/1838558756) today!
+
+<a href="https://www.packtpub.com/?utm_source=github&utm_medium=banner&utm_campaign=GitHubBanner"><img src="https://raw.githubusercontent.com/PacktPublishing/GitHub/master/GitHub.png" 
+alt="https://www.packtpub.com/" border="5" /></a>
 
 
+## Instructions and Navigations
+All of the code is organized into folders. For example, Chapter02.
 
 The code will look like the following:
 ```
-const express = require('express')
-const app = express()
-const past = require('./past')
-const future = require('./future')
-app.get('/:age', (req, res) => {
-    res.send(past(req.params.age, 10) + future(req.params.future, 10))
+process.stdin.on("data", (data) => {
+const name = data.toString().trim().toUpperCase();
+if (name !== "") {
+process.stdout.write(`Hello ${name}!`);
+} else {
+process.stderr.write("Input was empty.");
+}
 })
-app.listen(3000)
 ```
 
-The following is a list of the software that is required to run the examples in this book:
-* Chapters 1-10: Windows, macOS, or Linux.
-* Chapter 11: Linux or macOS (we recommend that Windows users work through Chapter 11, Deploying Node.js, by SSH-ing into a remote Linux machine).
-* Node 6 or higher. In cases where the code is specific to Node 8, this is specified.
-* Node can be downloaded from http://nodejs.org.
-* Curl 7: Curl can be downloaded from http://curl.haxx.se.
+**Following is what you need for this book:**
 
-## Related Products
-* [Universal JavaScript with React, Node, and Redux [Video]](https://www.packtpub.com/web-development/universal-javascript-react-node-and-redux-video?utm_source=github&utm_medium=repository&utm_campaign=9781787286795)
+The book is for web developers who have knowledge of JavaScript and want to gain a broad understanding of Node.js concepts for server-side development.
 
-* [Cross-platform Desktop Application Development: Electron, Node, NW.js, and React](https://www.packtpub.com/web-development/cross-platform-desktop-application-development-electron-node-nwjs-and-react?utm_source=github&utm_medium=repository&utm_campaign=9781788295697)
+With the following software and hardware list you can run all code files present in the book (Chapter 1-12).
 
-* [Building Bots with Node.js](https://www.packtpub.com/application-development/building-bots-nodejs?utm_source=github&utm_medium=repository&utm_campaign=9781786465450)
+### Software and Hardware List
+
+| Chapter  | Software required                                      | OS required                     |
+| -------- | ------------------------------------------------------ | ------------------------------- |
+| 1-12     | Node.js 14 (including anpm)                            | Windows, MacOS, and Linux (Any) |
+| 1-12     | Google Chrome                                          | Windows, MacOS, and Linux (Any) |
+| 1-12     | cURL - Downloadable from https://curl.haxx.se/windows/ | Windows, MacOS, and Linux (Any) |
+| 1-12     | Docker                                                 | Windows, MacOS, and Linux (Any) |
+| 11       | Kubernetes (via Docker for Desktop)                    | Windows and MacOS               |
+
+Any chapters or recipes that require special software should cover the installation steps in the Technical requirements or Getting ready sections.
+Many of the Terminal steps assume you're operating in a Unix environment. On Windows, you should be able to use the Windows Subsystem for Linux (WSL 2) to
+complete these steps.
+
+We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://static.packt-cdn.com/downloads/9781838558758_ColorImages.pdf).
+
+
+### Related products <Other books you may enjoy>
+* Node.js Design Patterns - Third Edition [[Packt]](https://www.packtpub.com/product/node-js-design-patterns-third-edition/9781839214110?utm_source=github&utm_medium=repository&utm_campaign=9781839214110) [[Amazon]](https://www.amazon.com/dp/1839214112)
+
+* Node.js Web Development - Fifth Edition [[Packt]](https://www.packtpub.com/product/node-js-web-development-fifth-edition/9781838987572?utm_source=github&utm_medium=repository&utm_campaign=9781838987572) [[Amazon]](https://www.amazon.com/dp/1838987576)
+
+## Get to Know the Author
+**Bethany Griggs**
+is a Senior Software Engineer at Red Hat and a Node.js Technical Steering Committee Member. Beth has been involved with the Node.js project since 2016 when she joined IBM in their Node.js Runtime Team. Now at Red Hat, she’s continuing her work around Node.js, including contributing to the Node.js project. Beth is an active member of the Node.js Release Working Group, who audit the content for and produce the Node.js releases. Her other focuses are the creation of resources and tools to support Node.js deployments to cloud.
+
+
