@@ -27,14 +27,14 @@ alt="https://www.packtpub.com/" border="5" /></a>
 All of the code is organized into folders. For example, Chapter02.
 
 The code will look like the following:
-```
+```js
 process.stdin.on("data", (data) => {
-const name = data.toString().trim().toUpperCase();
-if (name !== "") {
-process.stdout.write(`Hello ${name}!`);
-} else {
-process.stderr.write("Input was empty.");
-}
+  const name = data.toString().trim().toUpperCase();
+  if (name !== "") {
+    process.stdout.write(`Hello ${name}!`);
+  } else {
+    process.stderr.write("Input was empty.");
+  }
 })
 ```
 
