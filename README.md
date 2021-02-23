@@ -35,7 +35,7 @@ process.stdin.on("data", (data) => {
   } else {
     process.stderr.write("Input was empty.");
   }
-})
+});
 ```
 
 **Following is what you need for this book:**
