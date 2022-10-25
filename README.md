@@ -71,3 +71,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 is a Senior Software Engineer at Red Hat and a Node.js Technical Steering Committee Member. Beth has been involved with the Node.js project since 2016 when she joined IBM in their Node.js Runtime Team. Now at Red Hat, she’s continuing her work around Node.js, including contributing to the Node.js project. Beth is an active member of the Node.js Release Working Group, who audit the content for and produce the Node.js releases. Her other focuses are the creation of resources and tools to support Node.js deployments to cloud.
 
 
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781838558758">https://packt.link/free-ebook/9781838558758 </a> </p>
