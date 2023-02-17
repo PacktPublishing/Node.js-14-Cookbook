@@ -16,7 +16,7 @@ function error(res, code) {
 }
 
 function todo(res) {
-  res.end('[{"task_id": 1, "description": "walk dog"}]}');
+  res.end('[{"task_id": 1, "description": "walk dog"}]');
 }
 
 function index(res) {
